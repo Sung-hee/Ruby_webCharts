@@ -10,17 +10,21 @@ class HomeController < ApplicationController
 
   def charts
     @title = "일반차트"
-
+    @urlparam = request.query_parameters['name']
+    
+    puts @urlparam
   end
   
   def weekcharts
     @title = "골드차트"
     @urlparam = request.query_parameters['name']
+    puts @urlparam
   end
   
   def monthcharts
     @title = "일반차트"
     @urlparam = request.query_parameters['name']
+    puts @urlparam
   end
 
   def tables
